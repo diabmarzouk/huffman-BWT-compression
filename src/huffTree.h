@@ -80,7 +80,8 @@ string huffTree::decompressFile(string inString){
     size_t eof, i = 0;
     char newChar;
     int nextElement, newFreq;
-    size_t eoTable = inString.find("BwtHuffmanEofTable ");
+    std::string eotString = "BwtHuffmanEofTable ";
+    size_t eoTable = inString.find(eotString);
     priority_queue<huffObj, vector<huffObj>,Compare> prioQ;
     while(i<eoTable){
         newChar = inString[i];
@@ -92,7 +93,7 @@ string huffTree::decompressFile(string inString){
     }
 
     buildTree(prioQ);
-    i = eoTable+17;
+    i = eoTable+eotString.size();
     eof = inString.size();
 
     while(i<eof){
