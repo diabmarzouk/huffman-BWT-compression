@@ -5,15 +5,12 @@ The motivation for creating this project lies behind for my peeked interest in c
 This project has only been tested on UNIX based systems such as Linux & macOS. Furthermore, it has only been tested to compress text files, however, it theoretically should be able to compress all sorts of files.
 
 To compile this project on Linux/macOS, run the Makefile command:
-
-Make main
+**Make main**
 
 This will compile all headers and the main.cpp.
 
 To remove all files run:
-
-Make clean
+**Make clean**
 
 To debug:
-
-Make debug
+**Make debug**
